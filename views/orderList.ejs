@@ -1,0 +1,45 @@
+<%- include('fragments/header.ejs') %>
+    <main>
+        <h2>Zamowienia</h2>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Klient</th>
+                    <th>Przedmiot</th>
+                    <th>Data</th>
+                    <th>Data wysyłki</th>
+                    <th>Adres wysyłki</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jan Kowalski</td>
+                    <td>Test</td>
+                    <td>30.10.2020</td>
+                    <td>Przewidywana data wysyłki 10.11.2020</td>
+                    <td>Ul. Testowa</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/order/details" class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="/order/edit" class="list-actions-button-edit">Edytuj</a>
+                            </li>
+                            <li>
+                                <a href="/order/delete" class="list-actions-button-delete">Usuń</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a class="button-add" href="/order/add">Dodaj zamowienie</a></p>
+
+        
+    </main>
+    <%- include('fragments/footer.ejs') %>
+

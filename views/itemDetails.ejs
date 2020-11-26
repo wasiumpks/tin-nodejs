@@ -1,0 +1,50 @@
+<%- include('fragments/header.ejs') %>
+    <main>
+        <h2>Dane o przedmiocie</h2>
+        <form class="form"> 
+            <label for="name">Nazwa:</label>
+            <input type="text" value="Przedmiot" name="name" id="name" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="type">Typ:</label>
+            <input type="text" value="RTV" name="type" id="type" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="price">Cena:</label>
+            <input type="text" value="1000 PLN" name="price" id="price" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <div class="form-buttons">
+                <p id="errorsSummary" class="errors-text"></p>
+                <a class="form-button-submit" href="/item/edit">Edytuj</a>
+            </div> 
+        </form>
+
+        <h2>
+            Zamówienia:
+        </h2>
+
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Kupiec</th>
+                <th>Ilość</th>
+                <th>Cena</th>
+            </tr>
+            </thead>
+
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Jan Kowalski</td>
+                <td>1</td>
+                <td>1000</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+
+    </main>
+    <%- include('fragments/footer.ejs') %>

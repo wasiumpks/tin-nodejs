@@ -1,0 +1,61 @@
+<%- include('fragments/header.ejs') %>
+    <main>
+        <h2>Dane o zamowieniu</h2>
+        <form class="form">
+            <label for="id">ID:</label>
+            <input type="text" value="1" name="id" id="id" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="client">Klient:</label>
+            <input type="text" value="Jan Kowalski" name="client" id="client" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="item">Przedmiot:</label>
+            <input type="text" value="Testowy" name="item" id="item" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="date">Data:</label>
+            <input type="text" value="30.10.2020" name="date" id="date" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="shiping-date">Data wysyłki:</label>
+            <input type="text" value="10.11.2020" name="shiping-date" id="shiping-date" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <label for="shipping-address">Adres wysyłki:</label>
+            <input type="text" value="Ul. Testowa" name="shipping-address" id="shipping-address" disabled/>
+            <span id="errorFirstName" class="errors-text"></span>
+
+            <div class="form-buttons">
+                <a class="form-button-submit" href="/order/edit">Edytuj</a>
+            </div> 
+        </form>
+
+        <h2>
+            Zamówienie:
+        </h2>
+
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nazwa</th>
+                <th>Ilość</th>
+                <th>Cena</th>
+            </tr>
+            </thead>
+
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>TV</td>
+                <td>1</td>
+                <td>1000</td>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+
+    </main>
+    <%- include('fragments/footer.ejs') %>

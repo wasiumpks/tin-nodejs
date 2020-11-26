@@ -1,0 +1,44 @@
+<%- include('fragments/header.ejs') %>
+<main>
+    <h2>Dane o kliencie</h2>
+    <form class="form">
+        <label for="firstName">Imię:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" value="Jan" name="firstName" id="firstName" disabled/>
+        <span id="errorFirstName" class="errors-text"></span>
+        <label for="lastName">Nazwisko:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" value="Kowalski" name="lastName" id="lastName" disabled/>
+        <span id="errorFirstName" class="errors-text"></span>
+        <label for="email">Email:<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" value="jan.kowalski@acme.com" name="email" id="email" disabled/>
+        <span id="errorFirstName" class="errors-text"></span>
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <a class="list-actions-button-edit" href="/user/edit">Edytuj</a>
+        </div>
+    </form>
+
+
+    <h2>Dane o zakupach</h2>
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nazwa</th>
+            <th>Typ</th>
+            <th>Cena(PLN)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>TV</td>
+            <td>RTV</td>
+            <td>1000</td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="/user" class="list-actions-button-details form-buttons">Powrót</a>
+
+</main>
+<%- include('fragments/footer.ejs') %>

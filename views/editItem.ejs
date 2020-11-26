@@ -1,0 +1,26 @@
+<%- include('fragments/header.ejs') %>
+    <main>
+        <h2>Edytuj przedmiot</h2>
+        <form class="form" novalidate onsubmit="return validateForm();">
+            <label for="name">Nazwa:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="name" id="name" value="TV" />
+            <span id="errorName" class="errors-text"></span>
+
+            <label for="type">Typ:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="type" id="type"value="RTV"/>
+            <span id="errorType" class="errors-text"></span>
+
+            <label for="price">Cena(PLN):<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="price" id="price" value="1000"/>
+            <span id="errorPrice" class="errors-text"></span>
+
+            <div class="form-buttons">
+                <p id="errorsSummary" class="errors-text"></p>
+                <input class="form-button-submit" type="submit" value="Dodaj" />
+                <a class="form-button-cancel" href="/item">Anuluj</a>
+            </div>
+
+        </form>
+
+    </main>
+    <%- include('fragments/footer.ejs') %>

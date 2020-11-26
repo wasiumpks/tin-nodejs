@@ -1,0 +1,41 @@
+<%- include('fragments/header.ejs') %>
+
+<body>
+<main>
+    <h2>Edytuj zamówienie</h2>
+    <form class="form" novalidate onsubmit="return validateForm();">
+        <label for="client">Klient:<abbr title="required" aria-label="required">*</abbr></label>
+        <select id="client" name="client">
+            <option value="client" selected>Jan Kowalski</option>
+        </select>
+        <span id="errorClient" class="errors-text"></span>
+        <label for="item">Przedmiot:<abbr title="required" aria-label="required">*</abbr></label>
+        <select id="item" name="client">
+            <option value="item" selected>TV</option>
+        </select>
+        <span id="errorItem" class="errors-text"></span>
+
+        <label for="price">Cena(PLN):<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="price" id="price" value="1000"/>
+        <span id="errorPrice" class="errors-text"></span>
+
+        <label for="date">Data:</label>
+        <input type="date" name="date" id="date" value="2020-10-24"/>
+        <span id="errorDate" class="errors-text"></span>
+
+        <label for="shiping-date">Data wysyłki:</label>
+        <input type="date" name="shiping-date" id="shiping-date"  value="2020-10-24" />
+        <span id="errorShippingDate" class="errors-text"></span>
+
+        <label for="shipping-address">Adres wysyłki:</label>
+        <input type="text" name="shipping-address" id="shipping-address" value="ul. Testowa 1" />
+        <span id="errorShippingAddress" class="errors-text"></span>
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <input class="form-button-submit" type="submit" value="Dodaj" />
+            <a class="form-button-cancel" href="/">Anuluj</a>
+        </div>
+    </form>
+</main>
+<%- include('fragments/footer.ejs') %>

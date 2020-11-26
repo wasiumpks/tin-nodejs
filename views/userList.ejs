@@ -1,0 +1,39 @@
+<%- include('fragments/header.ejs') %>
+
+<main>
+        <h2>Klienci</h2>
+        <table class="table-list">
+            <thead>
+                <tr>
+                    <th>Imię</th>
+                    <th>Nazwisko</th>
+                    <th>E-mail</th>
+                    <th>Akcje</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jan</td>
+                    <td>Kowalski</td>
+                    <td>jan.kowalski@acme.com</td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/user/details" class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="/user/edit" class="list-actions-button-edit">Edytuj</a>
+                            </li>
+                            <li>
+                                <a href="/user/delete" class="list-actions-button-delete">Usuń</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><a  class="button-add" href="/user/add">Dodaj nowego klienta</a></p>
+
+        
+    </main>
+<%- include('fragments/footer.ejs') %>
